@@ -446,6 +446,11 @@ a:hover {
   align-items: center;
 }
 
+.post-attach .post-categories i {
+  margin-right: 10px !important;
+
+}
+
 @media (max-width: 768px) {
   .time-m-d {
     margin-right: 15px;
@@ -506,7 +511,7 @@ a:hover {
   bottom: 2px;
   width: 6px;
   height: 69%;
-  background-color: #ed7d32;
+  background-color: gray;
   opacity: 0.45;
 }
 
@@ -517,7 +522,7 @@ a:hover {
   bottom: 2px;
   width: 6px;
   height: 69%;
-  background-color: #ed7d32;
+  background-color: gray;
   opacity: 0.55;
 }
 
