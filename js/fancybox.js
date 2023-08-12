@@ -25,15 +25,3 @@ let fancyTimer = setInterval(function(){
   });
 }, 10);
 
-
-// 去除html标签以及空格
-let spanCategorys = document.querySelectorAll('.span-category');
-for(let spanCategory of spanCategorys) {
-  let categoryLinks = spanCategory.getElementsByTagName('a').innerText.toString();
-  for(let categoryLink of categoryLinks) {
-    // let categoryLink = categoryLink.replace(/<\/?[^>]*>/g, '');
-    // categoryLink = categoryLink.replace(/[|]*\n/, '');
-    categoryLink = categoryLink.replace(/&nbsp;/ig, '');
-    window.alert(categoryLink);
-  }
-}
