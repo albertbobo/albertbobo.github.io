@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-08-14T07:33:37.174Z</updated>
+  <updated>2023-08-14T10:51:44.908Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html"/>
     <id>https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html</id>
     <published>2023-08-12T10:09:17.121Z</published>
-    <updated>2023-08-14T07:33:37.174Z</updated>
+    <updated>2023-08-14T10:51:44.908Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;盒子模型的宽度计算&quot;&gt;&lt;a href=&quot;#盒子模型的宽度计算&quot; class=&quot;headerlink&quot; title=&quot;盒子模型的宽度计算&quot;&gt;&lt;/a&gt;盒子模型的宽度计算&lt;/h3&gt;&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;盒子模型的宽度计算&quot;&gt;&lt;a href=&quot;#盒子模型的宽度计算&quot; class=&quot;headerlink&quot; title=&quot;盒子模型的宽度计算&quot;&gt;&lt;/a&gt;盒子模型的宽度计算&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;offsetWidth &amp;#x3D; width +</summary>
         
       
