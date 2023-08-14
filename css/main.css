@@ -1511,11 +1511,6 @@ a:hover {
   align-items: center;
 }
 
-.post-attach .post-categories i {
-  margin-right: 10px !important;
-
-}
-
 @media (max-width: 768px) {
   .time-m-d {
     margin-right: 15px;

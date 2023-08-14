@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  <icon>http://example.com/icon.png</icon>
+  <title>Max&#39;s Blog</title>
+  <icon>https://albertbobo.github.io/icon.png</icon>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://albertbobo.github.io/"/>
   <updated>2023-08-14T07:33:37.174Z</updated>
-  <id>http://example.com/</id>
+  <id>https://albertbobo.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Max</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CSS布局</title>
-    <link href="http://example.com/2023/08/12/CSS-%E5%B8%83%E5%B1%80/"/>
-    <id>http://example.com/2023/08/12/CSS-%E5%B8%83%E5%B1%80/</id>
+    <link href="https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html"/>
+    <id>https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html</id>
     <published>2023-08-12T10:09:17.121Z</published>
     <updated>2023-08-14T07:33:37.174Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
+    <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
     
     
-    <category term="BFC" scheme="http://example.com/tags/BFC/"/>
+    <category term="CSS布局" scheme="https://albertbobo.github.io/tags/CSS%E5%B8%83%E5%B1%80/"/>
     
-    <category term="CSS布局" scheme="http://example.com/tags/CSS%E5%B8%83%E5%B1%80/"/>
+    <category term="BFC" scheme="https://albertbobo.github.io/tags/BFC/"/>
     
-    <category term="flex" scheme="http://example.com/tags/flex/"/>
+    <category term="flex" scheme="https://albertbobo.github.io/tags/flex/"/>
     
   </entry>
   
