@@ -1461,10 +1461,10 @@ a:hover {
 
 .post-details .post-title {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--color-text-a);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .post-details .post-attach {
