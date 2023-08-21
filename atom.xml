@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-08-17T15:19:42.772Z</updated>
+  <updated>2023-08-21T15:35:32.437Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS定位</title>
+    <link href="https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html"/>
+    <id>https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html</id>
+    <published>2023-08-21T10:15:56.615Z</published>
+    <updated>2023-08-21T15:35:32.437Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;absolute-和-relative-定位的依据&quot;&gt;&lt;a href=&quot;#absolute-和-relative-定位的依据&quot; class=&quot;headerlink&quot; title=&quot;absolute 和 relative 定位的依据&quot;&gt;&lt;/a&gt;absolute 和</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS定位" scheme="https://albertbobo.github.io/tags/CSS%E5%AE%9A%E4%BD%8D/"/>
+    
+    <category term="居中对齐" scheme="https://albertbobo.github.io/tags/%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS布局</title>
     <link href="https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html"/>
     <id>https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html</id>
     <published>2023-08-12T10:09:17.121Z</published>
-    <updated>2023-08-17T15:19:42.772Z</updated>
+    <updated>2023-08-21T15:27:46.029Z</updated>
     
     
       
