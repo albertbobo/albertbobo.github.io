@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-08-22T07:38:15.651Z</updated>
+  <updated>2023-08-22T08:47:25.907Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://albertbobo.github.io/CSS-%E6%96%87%E6%9C%AC.html"/>
     <id>https://albertbobo.github.io/CSS-%E6%96%87%E6%9C%AC.html</id>
     <published>2023-08-22T07:13:56.731Z</published>
-    <updated>2023-08-22T07:38:15.651Z</updated>
+    <updated>2023-08-22T08:47:25.907Z</updated>
     
     
       
@@ -40,11 +40,7 @@
     <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
     
     
-    <category term="文本溢出" scheme="https://albertbobo.github.io/tags/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/"/>
-    
-    <category term="文本换行" scheme="https://albertbobo.github.io/tags/%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C/"/>
-    
-    <category term="行高继承" scheme="https://albertbobo.github.io/tags/%E8%A1%8C%E9%AB%98%E7%BB%A7%E6%89%BF/"/>
+    <category term="文本" scheme="https://albertbobo.github.io/tags/%E6%96%87%E6%9C%AC/"/>
     
   </entry>
   
@@ -53,7 +49,7 @@
     <link href="https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html"/>
     <id>https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html</id>
     <published>2023-08-21T10:15:56.615Z</published>
-    <updated>2023-08-22T07:46:20.625Z</updated>
+    <updated>2023-08-22T08:45:41.069Z</updated>
     
     
       
@@ -69,8 +65,6 @@
     <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
     
     
-    <category term="CSS定位" scheme="https://albertbobo.github.io/tags/CSS%E5%AE%9A%E4%BD%8D/"/>
-    
     <category term="居中对齐" scheme="https://albertbobo.github.io/tags/%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90/"/>
     
   </entry>
@@ -80,7 +74,7 @@
     <link href="https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html"/>
     <id>https://albertbobo.github.io/CSS-%E5%B8%83%E5%B1%80.html</id>
     <published>2023-08-12T10:09:17.121Z</published>
-    <updated>2023-08-21T16:15:13.366Z</updated>
+    <updated>2023-08-22T08:46:50.265Z</updated>
     
     
       
@@ -96,8 +90,6 @@
     
     <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
     
-    
-    <category term="CSS布局" scheme="https://albertbobo.github.io/tags/CSS%E5%B8%83%E5%B1%80/"/>
     
     <category term="BFC" scheme="https://albertbobo.github.io/tags/BFC/"/>
     

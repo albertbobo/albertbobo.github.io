@@ -20,11 +20,7 @@
       
         <tags>
             
-            <tag> 文本溢出 </tag>
-            
-            <tag> 文本换行 </tag>
-            
-            <tag> 行高继承 </tag>
+            <tag> 文本 </tag>
             
         </tags>
       
@@ -48,8 +44,6 @@
       
       
         <tags>
-            
-            <tag> CSS定位 </tag>
             
             <tag> 居中对齐 </tag>
             
@@ -75,8 +69,6 @@
       
       
         <tags>
-            
-            <tag> CSS布局 </tag>
             
             <tag> BFC </tag>
             
