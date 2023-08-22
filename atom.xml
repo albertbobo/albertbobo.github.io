@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-08-22T08:47:25.907Z</updated>
+  <updated>2023-08-22T10:04:35.251Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS响应式</title>
+    <link href="https://albertbobo.github.io/CSS-%E5%93%8D%E5%BA%94%E5%BC%8F.html"/>
+    <id>https://albertbobo.github.io/CSS-%E5%93%8D%E5%BA%94%E5%BC%8F.html</id>
+    <published>2023-08-22T08:57:25.991Z</published>
+    <updated>2023-08-22T10:04:35.251Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;响应式&quot;&gt;&lt;a href=&quot;#响应式&quot; class=&quot;headerlink&quot; title=&quot;响应式&quot;&gt;&lt;/a&gt;响应式&lt;/h2&gt;&lt;h3 id=&quot;rem-是什么&quot;&gt;&lt;a href=&quot;#rem-是什么&quot; class=&quot;headerlink&quot; title=&quot;rem</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
+    
+    
+    <category term="rem" scheme="https://albertbobo.github.io/tags/rem/"/>
+    
+    <category term="vw" scheme="https://albertbobo.github.io/tags/vw/"/>
+    
+    <category term="vh" scheme="https://albertbobo.github.io/tags/vh/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS文本</title>

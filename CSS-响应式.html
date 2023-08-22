@@ -11,7 +11,7 @@
   
   <title>
     
-      CSS文本 
+      CSS响应式 
       
       
       |
@@ -138,11 +138,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">CSS文本</div>
+      <div class="post-title">CSS响应式</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-08-22 16:47:25
+          2023-08-22 18:04:35
         </span>
         
               <span class="post-categories">
@@ -160,8 +160,20 @@
                 <i class="iconfont icon-tags mr-10" title="标签"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E6%96%87%E6%9C%AC/" title="文本">
-                    #文本
+                  <a href="/tags/rem/" title="rem">
+                    #rem
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/vw/" title="vw">
+                    #vw
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/vh/" title="vh">
+                    #vh
                   </a>
                 </span>
                 
@@ -169,50 +181,42 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="文本溢出"><a href="#文本溢出" class="headerlink" title="文本溢出"></a>文本溢出</h2><ul>
-<li>单行文字溢出显示省略号</li>
+        <h2 id="响应式"><a href="#响应式" class="headerlink" title="响应式"></a>响应式</h2><h3 id="rem-是什么"><a href="#rem-是什么" class="headerlink" title="rem 是什么"></a>rem 是什么</h3><ul>
+<li>px，绝对长度单位，最常用</li>
+<li>em，相对长度单位，相对于父元素，不常用</li>
+<li>rem，相对长度单位，相对于根元素，常用于响应式布局</li>
+<li>例如： <code>html &#123;font-size: 100px;&#125;</code> ，1rem 相当于 100px，不仅仅可以设置字体大小，其他 px 单位的都可以使用 rem，比如设<code>padding: .2rem</code>，相当于 <code>padding: 20px</code></li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	-ms-<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">	<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">	<span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>多行文字溢出显示省略号</li>
+<h3 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h3><ul>
+<li>meta：<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></li>
+<li>media-query：根据不同的屏幕宽度设置根元素的 font-size</li>
+<li>rem：基于根元素的相对单位</li>
+<li>PC 端：限制最外层 container 的宽度</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: -webkit-box;            <span class="comment">/* 将对象作为弹性伸缩盒子模型显示 */</span></span><br><span class="line">	-webkit-line-clamp: <span class="number">3</span>;           <span class="comment">/* 限制在一个块元素显示的文本的行数 */</span></span><br><span class="line">	-webkit-box-orient: vertical;    <span class="comment">/* 设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	-ms-<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">	<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">374px</span>) &#123;</span><br><span class="line">    <span class="comment">/* iPhone5 或者更小的尺寸，以 iPhone5 的宽度 320px比例设置 */</span></span><br><span class="line">    <span class="selector-tag">html</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">85px</span>;	<span class="comment">/* 85/100 ≈ 320/375 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">375px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">413px</span>) &#123;</span><br><span class="line">    <span class="comment">/* iPhone6/7/8 和 iPhone x */</span></span><br><span class="line">    <span class="selector-tag">html</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">414px</span>) &#123;</span><br><span class="line">    <span class="comment">/* iPhone6p 或者更大的尺寸，以 iPhone6p 的宽度414px比例设置 */</span></span><br><span class="line">    <span class="selector-tag">html</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">110px</span>;	<span class="comment">/* 110/100 ≈ 414/375 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.16rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="/images/image-loading.svg" data-original="../images/image-20230822153315702.png" alt="image-20230822153315702" style="zoom: 67%;" />
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span>this is div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
-
-<h2 id="文本换行"><a href="#文本换行" class="headerlink" title="文本换行"></a>文本换行</h2><ul>
-<li>如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行</li>
+<p><em>注意！rem 弊端：产生“阶梯”性</em></p>
+<h2 id="网页视口尺寸"><a href="#网页视口尺寸" class="headerlink" title="网页视口尺寸"></a>网页视口尺寸</h2><ul>
+<li><strong>window.screen.height</strong>：屏幕高度</li>
+<li><strong>window.innerHeight</strong>：网页视口高度</li>
+<li><strong>clientHeight</strong>：div 高度</li>
+<li><strong>clientWidth</strong>：div 宽度</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">overflow-wrap</span>: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>对于非 CJK 文本，在任意字符间断行</li>
+<h3 id="vw-vh"><a href="#vw-vh" class="headerlink" title="vw &#x2F; vh"></a>vw &#x2F; vh</h3><ul>
+<li><strong>vh</strong>：网页视口高度的 1&#x2F;100，window.innerHeight &#x3D;&#x3D;&#x3D; 100vh</li>
+<li><strong>vw</strong>：网页视口宽度的 1&#x2F;100，window.innerWidth &#x3D;&#x3D;&#x3D; 100vw</li>
+<li><strong>vmax</strong>：取 vw&#x2F;vh 两者最大值</li>
+<li><strong>vmin</strong>：取 vw&#x2F;vh 两者最小值</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">word-break</span>: break-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<img src="/images/image-loading.svg" data-original="../images/image-20230822153356897.png" alt="image-20230822153356897" style="zoom:67%;" />
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20vw</span>;    <span class="comment">/* 20vw = window.innerWidth/100*20 */</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10vh</span>;   <span class="comment">/* 10vh = window.innerHeight/100*10 */</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;屏幕高度： &quot;</span>, <span class="variable language_">window</span>.<span class="property">screen</span>.<span class="property">height</span>);     <span class="comment">// 720</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;网页视口宽度: &quot;</span>, <span class="variable language_">window</span>.<span class="property">innerWidth</span>);     <span class="comment">// 1280</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;网页视口高度: &quot;</span>, <span class="variable language_">window</span>.<span class="property">innerHeight</span>);    <span class="comment">// 571</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;div宽度：&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;container&quot;</span>).<span class="property">clientWidth</span>);    <span class="comment">// 256</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;div高度：&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;container&quot;</span>).<span class="property">clientHeight</span>);   <span class="comment">// 57</span></span><br></pre></td></tr></table></figure>
 
 
-
-<h2 id="line-height-继承"><a href="#line-height-继承" class="headerlink" title="line-height 继承"></a>line-height 继承</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一段文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>具体数值</strong>：子元素未设置具体行高数值，会自动继承父元素的行高</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* p的line-height是50px */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>按比例</strong>：子元素未设置行高，父元素行高为1.5，子元素 line-height &#x3D; 自身 font-size * 1.5</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* p的line-height是24px */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>百分比</strong>：子元素不会直接继承父元素行高，而是继承父元素字体大小 * 行高百分比</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* p的line-height是40px */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">200%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       </div>
@@ -220,7 +224,7 @@
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/CSS-%E5%AE%9A%E4%BD%8D.html" target="_self">
+              <a href="/CSS-%E6%96%87%E6%9C%AC.html" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一页</span>
               </a>
@@ -229,7 +233,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-08-22 16:47:25
+              2023-08-22 18:04:35
             </span>
             
                   <span class="post-categories">
@@ -247,8 +251,20 @@
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/%E6%96%87%E6%9C%AC/" title="文本">
-                        #文本
+                      <a href="/tags/rem/" title="rem">
+                        #rem
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/vw/" title="vw">
+                        #vw
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/vh/" title="vh">
+                        #vh
                       </a>
                     </span>
                     
@@ -256,11 +272,6 @@
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/CSS-%E5%93%8D%E5%BA%94%E5%BC%8F.html" target="_self">
-                <span>下一页</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -274,7 +285,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA"><span class="toc-text">文本溢出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C"><span class="toc-text">文本换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#line-height-%E7%BB%A7%E6%89%BF"><span class="toc-text">line-height 继承</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="toc-text">响应式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rem-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">rem 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80"><span class="toc-text">响应式布局</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E8%A7%86%E5%8F%A3%E5%B0%BA%E5%AF%B8"><span class="toc-text">网页视口尺寸</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vw-vh"><span class="toc-text">vw &#x2F; vh</span></a></li></ol></li></ol>
       
     </div>
   </div>
@@ -567,12 +578,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + CSS%E6%96%87%E6%9C%AC + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FCSS-%25E6%2596%2587%25E6%259C%25AC.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + CSS%E5%93%8D%E5%BA%94%E5%BC%8F + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FCSS-%25E5%2593%258D%25E5%25BA%2594%25E5%25BC%258F.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/CSS-%E6%96%87%E6%9C%AC.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/CSS-%E5%93%8D%E5%BA%94%E5%BC%8F.html" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
