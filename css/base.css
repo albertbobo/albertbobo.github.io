@@ -499,6 +499,13 @@ a:hover {
   opacity: 1;
 }
 
+@media (max-width: 888px) {
+  .toc-link.active, .toc-link:hover {
+    color: var(--color-text-a);
+    opacity: 1;
+  }
+}
+
 .toc-link:hover::after {
   content: "";
   position: absolute;
