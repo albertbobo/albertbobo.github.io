@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-08-21T16:16:11.332Z</updated>
+  <updated>2023-08-22T07:38:15.651Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS文本</title>
+    <link href="https://albertbobo.github.io/CSS-%E6%96%87%E6%9C%AC.html"/>
+    <id>https://albertbobo.github.io/CSS-%E6%96%87%E6%9C%AC.html</id>
+    <published>2023-08-22T07:13:56.731Z</published>
+    <updated>2023-08-22T07:38:15.651Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文本溢出&quot;&gt;&lt;a href=&quot;#文本溢出&quot; class=&quot;headerlink&quot; title=&quot;文本溢出&quot;&gt;&lt;/a&gt;文本溢出&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;单行文字溢出显示省略号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="https://albertbobo.github.io/categories/CSS/"/>
+    
+    
+    <category term="文本溢出" scheme="https://albertbobo.github.io/tags/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/"/>
+    
+    <category term="文本换行" scheme="https://albertbobo.github.io/tags/%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C/"/>
+    
+    <category term="行高继承" scheme="https://albertbobo.github.io/tags/%E8%A1%8C%E9%AB%98%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS定位</title>
     <link href="https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html"/>
     <id>https://albertbobo.github.io/CSS-%E5%AE%9A%E4%BD%8D.html</id>
     <published>2023-08-21T10:15:56.615Z</published>
-    <updated>2023-08-21T16:16:11.332Z</updated>
+    <updated>2023-08-22T07:46:20.625Z</updated>
     
     
       
