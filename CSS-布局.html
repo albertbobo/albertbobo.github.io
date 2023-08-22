@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-08-22 16:46:50
+          2023-08-22 18:12:46
         </span>
         
               <span class="post-categories">
@@ -251,9 +251,9 @@
 <li>防止中间内容被两侧覆盖，圣杯布局用 padding，双飞翼布局用 margin</li>
 </ul>
 <h3 id="圣杯布局的实现"><a href="#圣杯布局的实现" class="headerlink" title="圣杯布局的实现"></a>圣杯布局的实现</h3><ul>
-<li>header、footer 宽度100%撑满</li>
+<li>header、footer 宽度 100% 撑满</li>
 <li>center、left、right 都设置左浮动，left、right 设为相对定位</li>
-<li>center 放在最前面，宽度100%撑满，left 和 right 分别定宽 200px 和 150px</li>
+<li>center 放在最前面，宽度 100% 撑满，left 和 right 分别定宽 200px 和 150px</li>
 <li>给外层的 container 设置 <code>padding-left: 200px; padding-right: 150px;</code>，给 left 和 right 空出位置</li>
 <li>设置 left 的 <code>margin-left: -100%;</code>，让 left 回到上一行</li>
 <li>设置 left 的<code>left: -200px;</code> 把 left 拉回最左侧</li>
@@ -263,9 +263,9 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span>, <span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> <span class="selector-class">.column</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#center</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: darkseagreen;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#left</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: cadetblue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#right</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: -<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="双飞翼布局的实现"><a href="#双飞翼布局的实现" class="headerlink" title="双飞翼布局的实现"></a>双飞翼布局的实现</h3><ul>
-<li>header、footer 宽度100%撑满</li>
+<li>header、footer 宽度 100% 撑满</li>
 <li>left、center、right 都设置左浮动</li>
-<li>center 放在最前面，宽度100%撑满，left 和 right 分别定宽 200px 和 150px</li>
+<li>center 放在最前面，宽度 100% 撑满，left 和 right 分别定宽 200px 和 150px</li>
 <li>设置负边距，left 设置<code>margin-left: -100%;</code>，right 设置<code>margin-left: -150px;</code></li>
 <li>设置 center-wrap 的 margin 值为左右两个侧栏留出空间，margin 值大小为 left 和 right 宽度</li>
 </ul>
@@ -362,7 +362,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-08-22 16:46:50
+              2023-08-22 18:12:46
             </span>
             
                   <span class="post-categories">
