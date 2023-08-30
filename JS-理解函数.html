@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-08-29 04:43:07
+          2023-08-31 02:21:34
         </span>
         
               <span class="post-categories">
@@ -242,7 +242,7 @@
 <h3 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h3><ul>
 <li>以…作为前缀的命名参数，放在函数参数的最后一个（否则报错），表示一个不定数量的<strong>数组</strong></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个参数与剩余参数的最大值相乘</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">multiMax</span>(<span class="params">first, ...remainingNumbers</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> sorted = remainingNumbers.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b - a);	<span class="comment">// 降序排序</span></span><br><span class="line">    <span class="keyword">return</span> first * sorted[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">multiMax</span>(<span class="number">3</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);	<span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个参数与剩余参数的最大值相乘</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">multiMax</span>(<span class="params">first, ...remainingNumbers</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> sorted = remainingNumbers.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b - a);    <span class="comment">// 降序排序</span></span><br><span class="line">    <span class="keyword">return</span> first * sorted[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">multiMax</span>(<span class="number">3</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);	<span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -362,7 +362,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-08-29 04:43:07
+              2023-08-31 02:21:34
             </span>
             
                   <span class="post-categories">
