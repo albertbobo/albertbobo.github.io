@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-09-11T13:55:52.303Z</updated>
+  <updated>2023-09-11T16:41:51.210Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://albertbobo.github.io/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html"/>
     <id>https://albertbobo.github.io/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html</id>
     <published>2023-09-11T08:20:46.749Z</published>
-    <updated>2023-09-11T13:55:52.303Z</updated>
+    <updated>2023-09-11T16:41:51.210Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="https://albertbobo.github.io/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html"/>
     <id>https://albertbobo.github.io/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html</id>
     <published>2023-09-01T09:12:08.485Z</published>
-    <updated>2023-09-11T14:03:11.302Z</updated>
+    <updated>2023-09-11T14:10:13.634Z</updated>
     
     
       
@@ -64,9 +64,9 @@
     <category term="JS" scheme="https://albertbobo.github.io/categories/JS/"/>
     
     
-    <category term="class" scheme="https://albertbobo.github.io/tags/class/"/>
-    
     <category term="类" scheme="https://albertbobo.github.io/tags/%E7%B1%BB/"/>
+    
+    <category term="继承" scheme="https://albertbobo.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
     
   </entry>
   
