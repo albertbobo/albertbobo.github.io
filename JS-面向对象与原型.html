@@ -11,7 +11,7 @@
   
   <title>
     
-      Category 
+      JS面向对象与原型 
       
       
       |
@@ -129,19 +129,150 @@
 
 
   
-  <!-- 分类页 url形式：https://yoursite/categories/ -->
-  <div class="container category-index">
-    <div>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">4</span></li></ul>
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JS面向对象与原型</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-09-11 21:55:52
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark mr-10" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/JS/" title="JS">
+                    #JS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%8E%9F%E5%9E%8B/" title="原型">
+                    #原型
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%BB%A7%E6%89%BF/" title="继承">
+                    #继承
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="理解原型"><a href="#理解原型" class="headerlink" title="理解原型"></a>理解原型</h2><ul>
+<li>每个对象都含有原型的引用，当查找属性时，若对象本身不具有该属性，则会查找原型上是否有该属性</li>
+<li>每个对象都可以有一个原型，每个对象的原型也可以有一个原型，以此类推，形成一个原型链</li>
+<li>查找特定属性将会被委托在整个原型链上，只有当没有更多的原型可以进行查找时，才会停止查找</li>
+<li>对象的原型属性 <code>[[prototype]]</code> 是内置属性，无法直接访问</li>
+<li>内置方法 <code>Object.setPrototypeOf</code> 传入两个对象作为参数，将第二个对象设置为第一个对象的原型</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象可以通过原型访问其他对象的属性</span></span><br><span class="line"><span class="keyword">const</span> chen = &#123;<span class="attr">running</span>: <span class="literal">true</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> zhang = &#123;<span class="attr">swimming</span>: <span class="literal">true</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> zeng = &#123;<span class="attr">walking</span>: <span class="literal">true</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用操作符 in 可以测试对象是否具有某一个特定的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;running&#x27;</span> <span class="keyword">in</span> chen);         <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;swimming&#x27;</span> <span class="keyword">in</span> chen);        <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;walking&#x27;</span> <span class="keyword">in</span> chen);         <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(chen, zhang);     <span class="comment">// 将对象 zhang 设置为对象 chen 的原型</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;swimming&#x27;</span> <span class="keyword">in</span> chen);        <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(zhang, zeng);     <span class="comment">// 将对象 zeng 设置为对象 zhang 的原型</span></span><br><span class="line"><span class="comment">// zeng &gt; zhang &gt; chen</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;walking&#x27;</span> <span class="keyword">in</span> zhang);        <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;walking&#x27;</span> <span class="keyword">in</span> chen);         <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="构造函数与原型"><a href="#构造函数与原型" class="headerlink" title="构造函数与原型"></a>构造函数与原型</h2><p>- </p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-09-11 21:55:52
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark mr-10" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/JS/" title="JS">
+                        #JS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%8E%9F%E5%9E%8B/" title="原型">
+                        #原型
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E7%BB%A7%E6%89%BF/" title="继承">
+                        #继承
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B"><span class="toc-text">理解原型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%8E%9F%E5%9E%8B"><span class="toc-text">构造函数与原型</span></a></li></ol>
+      
     </div>
   </div>
-  
 
   
+<script src="/js/catalog.js"></script>
 
-  
 
-  
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
 
         
 <div class="footer">
@@ -410,12 +541,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + categories + '&url=' + https%3A%2F%2Falbertbobo.github.io%2Fcategories%2Findex.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E9%259D%25A2%25E5%2590%2591%25E5%25AF%25B9%25E8%25B1%25A1%25E4%25B8%258E%25E5%258E%259F%25E5%259E%258B.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/categories/index.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

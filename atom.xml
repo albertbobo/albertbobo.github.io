@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-09-11T08:10:55.365Z</updated>
+  <updated>2023-09-11T13:55:52.303Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS面向对象与原型</title>
+    <link href="https://albertbobo.github.io/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html"/>
+    <id>https://albertbobo.github.io/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html</id>
+    <published>2023-09-11T08:20:46.749Z</published>
+    <updated>2023-09-11T13:55:52.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;理解原型&quot;&gt;&lt;a href=&quot;#理解原型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS" scheme="https://albertbobo.github.io/categories/JS/"/>
+    
+    
+    <category term="原型" scheme="https://albertbobo.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+    <category term="继承" scheme="https://albertbobo.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS类和类继承</title>
-    <link href="https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
-    <id>https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html</id>
+    <link href="https://albertbobo.github.io/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html"/>
+    <id>https://albertbobo.github.io/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html</id>
     <published>2023-09-01T09:12:08.485Z</published>
-    <updated>2023-09-11T08:10:55.365Z</updated>
+    <updated>2023-09-11T14:03:11.302Z</updated>
     
     
       
