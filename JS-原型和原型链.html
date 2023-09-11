@@ -11,7 +11,7 @@
   
   <title>
     
-      JS原型和原型链 
+      JS理解class和实现继承 
       
       
       |
@@ -138,11 +138,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">JS原型和原型链</div>
+      <div class="post-title">JS理解class和实现继承</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-11 15:50:30
+          2023-09-11 16:04:27
         </span>
         
               <span class="post-categories">
@@ -160,12 +160,6 @@
                 <i class="iconfont icon-tags mr-10" title="标签"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E5%8E%9F%E5%9E%8B/" title="原型">
-                    #原型
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
                   <a href="/tags/class/" title="class">
                     #class
                   </a>
@@ -178,9 +172,9 @@
         <h2 id="class-的基本语法"><a href="#class-的基本语法" class="headerlink" title="class 的基本语法"></a>class 的基本语法</h2><h3 id="关于-class"><a href="#关于-class" class="headerlink" title="关于 class"></a>关于 class</h3><ul>
 <li>ES6 引用了关键字 <code>class</code> 定义“类”，但是底层仍然是基于原型实现继承的方式，class 只是语法糖</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6 class 定义类并生成新对象</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="comment">// 构造方法</span></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">x</span> = x;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">y</span> = y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 成员方法</span></span><br><span class="line">    <span class="title function_">toString</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">`(<span class="subst">$&#123;<span class="variable language_">this</span>.x&#125;</span>, <span class="subst">$&#123;<span class="variable language_">this</span>.y&#125;</span>)`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> point = <span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">point.<span class="title function_">toString</span>();      <span class="comment">// (3, 4)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6 class 定义类并生成新对象</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="comment">// 构造方法</span></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">x</span> = x;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">y</span> = y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 成员方法</span></span><br><span class="line">    <span class="title function_">toString</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">`(<span class="subst">$&#123;<span class="variable language_">this</span>.x&#125;</span>, <span class="subst">$&#123;<span class="variable language_">this</span>.y&#125;</span>)`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> point = <span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">point.<span class="title function_">toString</span>();      <span class="comment">// (3, 4)</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 构造函数定义并生成新对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Point</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">x</span> = x;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">y</span> = y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Point</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;(&#x27;</span> + <span class="variable language_">this</span>.<span class="property">x</span> + <span class="string">&#x27;, &#x27;</span> + <span class="variable language_">this</span>.<span class="property">y</span> + <span class="string">&#x27;)&#x27;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> point = <span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">point.<span class="title function_">toString</span>();     <span class="comment">// (1, 2)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 构造函数定义并生成新对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Point</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">x</span> = x;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">y</span> = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Point</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;(&#x27;</span> + <span class="variable language_">this</span>.<span class="property">x</span> + <span class="string">&#x27;, &#x27;</span> + <span class="variable language_">this</span>.<span class="property">y</span> + <span class="string">&#x27;)&#x27;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> point = <span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">point.<span class="title function_">toString</span>();     <span class="comment">// (1, 2)</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>类的数据类型就是函数，类本身就指向构造函数</li>
@@ -398,7 +392,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-11 15:50:30
+              2023-09-11 16:04:27
             </span>
             
                   <span class="post-categories">
@@ -414,12 +408,6 @@
               
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/%E5%8E%9F%E5%9E%8B/" title="原型">
-                        #原型
-                      </a>
-                    </span>
                     
                     <span class="span--tag mr-8">
                       <a href="/tags/class/" title="class">
@@ -737,7 +725,7 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E5%258E%259F%25E5%259E%258B%25E5%2592%258C%25E5%258E%259F%25E5%259E%258B%25E9%2593%25BE.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E7%90%86%E8%A7%A3class%E5%92%8C%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E5%258E%259F%25E5%259E%258B%25E5%2592%258C%25E5%258E%259F%25E5%259E%258B%25E9%2593%25BE.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
