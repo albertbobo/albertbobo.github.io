@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-09-11T08:04:27.582Z</updated>
+  <updated>2023-09-11T08:10:55.365Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS理解class和实现继承</title>
+    <title>JS类和类继承</title>
     <link href="https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
     <id>https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html</id>
     <published>2023-09-01T09:12:08.485Z</published>
-    <updated>2023-09-11T08:04:27.582Z</updated>
+    <updated>2023-09-11T08:10:55.365Z</updated>
     
     
       
@@ -38,6 +38,8 @@
     
     
     <category term="class" scheme="https://albertbobo.github.io/tags/class/"/>
+    
+    <category term="类" scheme="https://albertbobo.github.io/tags/%E7%B1%BB/"/>
     
   </entry>
   

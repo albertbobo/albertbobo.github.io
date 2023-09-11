@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>JS理解class和实现继承</title>
+      <title>JS类和类继承</title>
       <link href="/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
       <url>/JS-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html</url>
       
@@ -21,6 +21,8 @@
         <tags>
             
             <tag> class </tag>
+            
+            <tag> 类 </tag>
             
         </tags>
       
