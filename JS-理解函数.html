@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-14 17:26:44
+          2023-09-14 23:26:00
         </span>
         
               <span class="post-categories">
@@ -315,24 +315,24 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用构造函数来实现通用对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Cat</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cat1 = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="keyword">let</span> cat2 = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cat1.<span class="title function_">color</span>() === cat1);      <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cat2.<span class="title function_">color</span>() === cat2);      <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用 new 调用构造函数会经历以下4个步骤</p>
-<ol>
+<ul>
 <li>创建一个新的空对象</li>
 <li>将构造函数的 this 指向新对象</li>
 <li>执行构造函数中的代码（为这个新对象添加属性）</li>
 <li>返回新对象</li>
-</ol>
+</ul>
 </li>
 <li><p>构造函数的目的</p>
-<ol>
+<ul>
 <li>创建一个新对象，并进行初始化</li>
 <li>然后将其作为构造函数的返回值</li>
-</ol>
+</ul>
 </li>
 <li><p>构造函数的返回值</p>
-<ol>
+<ul>
 <li>如果构造函数返回的是一个对象，则该对象将作为整个表达式的值返回，而传入构造函数的 this 将被丢弃</li>
 <li>如果构造函数返回的是非对象类型，则忽略返回值，返回新创建的对象</li>
-</ol>
+</ul>
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回基本类型值的构造函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Dog</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> dog1 = <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Dog</span>() === <span class="number">1</span>);                        <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> dog1 === <span class="string">&#x27;object&#x27;</span>);           <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> dog1.<span class="property">color</span> === <span class="string">&#x27;function&#x27;</span>);   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
@@ -391,7 +391,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-14 17:26:44
+              2023-09-14 23:26:00
             </span>
             
                   <span class="post-categories">
