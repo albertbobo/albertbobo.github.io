@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-01 16:26:01
+          2023-09-14 17:26:44
         </span>
         
               <span class="post-categories">
@@ -314,12 +314,12 @@
 <li><p>函数作为构造函数被调用时，this 指向新创建的对象实例</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用构造函数来实现通用对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Cat</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cat1 = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="keyword">let</span> cat2 = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cat1.<span class="title function_">color</span>() === cat1);      <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cat2.<span class="title function_">color</span>() === cat2);      <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>使用关键字 new 调用函数会触发以下几个动作</p>
+<li><p>使用 new 调用构造函数会经历以下4个步骤</p>
 <ol>
 <li>创建一个新的空对象</li>
-<li>该对象作为 this 参数传递给构造函数，从而成为构造函数的函数上下文</li>
-<li>新构造的对象作为 new 运算符的返回值</li>
-<li>返回结果存储在变量中，后续通过变量引用新构造的对象</li>
+<li>将构造函数的 this 指向新对象</li>
+<li>执行构造函数中的代码（为这个新对象添加属性）</li>
+<li>返回新对象</li>
 </ol>
 </li>
 <li><p>构造函数的目的</p>
@@ -342,7 +342,7 @@
 
 
 <h3 id="使用-apply-和-call-方法调用"><a href="#使用-apply-和-call-方法调用" class="headerlink" title="使用 apply 和 call 方法调用"></a>使用 apply 和 call 方法调用</h3><ul>
-<li>每个函数都可以使用 call 或 apply 方法来<strong>显式地</strong>指定任何对象作为函数的上下文</li>
+<li>每个函数都可以使用 call 或 apply 方法来<strong>显式地</strong>指定任何对象作为函数上下文</li>
 <li>通过 apply 或 call 方法调用函数，this 指向 apply 或 call 方法的第一个参数</li>
 <li>apply 方法参数：作为函数上下文（this）的对象，作为函数实参的一个数组</li>
 <li>call 方法参数：作为函数上下文（this）的对象，作为函数实参的一个或多个列表</li>
@@ -382,7 +382,7 @@
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/JS-%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html" target="_self">
+              <a href="/JS-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一页</span>
               </a>
@@ -391,7 +391,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-01 16:26:01
+              2023-09-14 17:26:44
             </span>
             
                   <span class="post-categories">
@@ -425,7 +425,7 @@
           </div>
           <div class="post-foot-prev">
             
-              <a href="/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html" target="_self">
+              <a href="/JS-%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%BB%A7%E6%89%BF.html" target="_self">
                 <span>下一页</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>

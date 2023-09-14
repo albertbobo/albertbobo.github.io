@@ -11,7 +11,7 @@
   
   <title>
     
-      JS类和类继承 
+      JS类与类继承 
       
       
       |
@@ -138,11 +138,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">JS类和类继承</div>
+      <div class="post-title">JS类与类继承</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-11 22:10:13
+          2023-09-14 17:30:58
         </span>
         
               <span class="post-categories">
@@ -315,14 +315,14 @@
 <ul>
 <li>super 虽然代表了父类 A 的构造函数，但是返回的是子类 B 的实例，即 super 内部的 this 指向的是 B</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span>.<span class="property">target</span>.<span class="property">name</span>);      <span class="comment">// new.target 指向当前正在执行的函数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>();     <span class="comment">// super 内部的 this 指向 B，super 相当 A.prototype.constructor.call(this)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title function_">A</span>();      <span class="comment">// A</span></span><br><span class="line"><span class="keyword">new</span> <span class="title function_">B</span>();      <span class="comment">// B</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span>.<span class="property">target</span>.<span class="property">name</span>);      <span class="comment">// new.target 指向当前正在执行的函数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>();     <span class="comment">// super 内部的 this 指向 B，super() 等同于 A.prototype.constructor.call(this)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title function_">A</span>();      <span class="comment">// A</span></span><br><span class="line"><span class="keyword">new</span> <span class="title function_">B</span>();      <span class="comment">// B</span></span><br></pre></td></tr></table></figure>
 
 
 
 <h4 id="super-作为对象"><a href="#super-作为对象" class="headerlink" title="super  作为对象"></a>super  作为对象</h4><ol>
 <li><strong>在普通方法中指向父类的原型对象</strong></li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">p</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>();</span><br><span class="line">        <span class="variable language_">super</span>.<span class="title function_">p</span>();      <span class="comment">// super 作为对象，super.p() 相当于 A.prototype.p()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">b.<span class="title function_">p</span>();     <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">p</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>();</span><br><span class="line">        <span class="variable language_">super</span>.<span class="title function_">p</span>();      <span class="comment">// super 作为对象，super.p() 等同于 A.prototype.p()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">b.<span class="title function_">p</span>();     <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 
 
 <ul>
@@ -338,7 +338,7 @@
 <ul>
 <li>通过 super 调用父类的方法时，super 会绑定子类的 this</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span> () &#123;</span><br><span class="line">    	<span class="variable language_">this</span>.<span class="property">x</span> = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">print</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">x</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span> () &#123;</span><br><span class="line">        <span class="variable language_">super</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">x</span> = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">m</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>.<span class="title function_">print</span>();    <span class="comment">// 相当于 A.prototype.print.call(this)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">b.<span class="title function_">m</span>();      <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span> () &#123;</span><br><span class="line">    	<span class="variable language_">this</span>.<span class="property">x</span> = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">print</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">x</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span> () &#123;</span><br><span class="line">        <span class="variable language_">super</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">x</span> = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">m</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>.<span class="title function_">print</span>();    <span class="comment">// 等同于 A.prototype.print.call(this)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">b.<span class="title function_">m</span>();      <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>如果通过 super 对某个属性赋值，这时 super 就是 this，赋值的属性会变成子类实例的属性</li>
@@ -393,7 +393,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-11 22:10:13
+              2023-09-14 17:30:58
             </span>
             
                   <span class="post-categories">
@@ -426,11 +426,6 @@
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/JS-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%8E%9F%E5%9E%8B.html" target="_self">
-                <span>下一页</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -737,12 +732,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E7%25B1%25BB%25E5%2592%258C%25E7%25B1%25BB%25E7%25BB%25A7%25E6%2589%25BF.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%BB%A7%E6%89%BF + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E7%25B1%25BB%25E4%25B8%258E%25E7%25B1%25BB%25E7%25BB%25A7%25E6%2589%25BF.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/JS-%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%BB%A7%E6%89%BF.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/JS-%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%BB%A7%E6%89%BF.html" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

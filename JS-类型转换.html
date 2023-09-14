@@ -11,7 +11,7 @@
   
   <title>
     
-      JS变量类型和计算 
+      JS类型转换 
       
       
       |
@@ -138,11 +138,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">JS变量类型和计算</div>
+      <div class="post-title">JS类型转换</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-08-25 22:55:23
+          2023-09-14 21:53:01
         </span>
         
               <span class="post-categories">
@@ -160,14 +160,14 @@
                 <i class="iconfont icon-tags mr-10" title="标签"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="数据类型">
-                    #数据类型
+                  <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" title="深拷贝">
+                    #深拷贝
                   </a>
                 </span>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" title="深拷贝">
-                    #深拷贝
+                  <a href="/tags/%E7%B1%BB%E5%9E%8B/" title="类型">
+                    #类型
                   </a>
                 </span>
                 
@@ -177,13 +177,13 @@
       <div class="markdown-body">
         <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><ul>
 <li>名字和值都存储在栈内存中，按值访问，可以操作保存在变量中的实际的值</li>
-<li>常用的基本类型：<code>Number</code> <code>String</code> <code>Boolean</code> <code>Undefined</code> <code>Null</code> <code>Symbol</code></li>
+<li>六种基本类型：<code>Number</code> <code>String</code> <code>Boolean</code> <code>Undefined</code> <code>Null</code> <code>Symbol</code></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 值类型</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line">a = <span class="number">200</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b);    <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基本类型</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line">a = <span class="number">200</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b);    <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><ul>
 <li>名字存储在栈内存中，值存储在堆内存中，操作的是变量的引用地址</li>
-<li>常用的引用类型：<code>Object</code> <code>Array</code>  <code>Function</code> <code>RegExp</code> <code>Date</code></li>
+<li>五种引用类型：<code>Object</code> <code>Array</code>  <code>Function</code> <code>RegExp</code> <code>Date</code></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用类型</span></span><br><span class="line"><span class="keyword">let</span> a = &#123; <span class="attr">age</span>: <span class="number">20</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line">b.<span class="property">age</span> = <span class="number">21</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a.<span class="property">age</span>);    <span class="comment">// 21</span></span><br></pre></td></tr></table></figure>
 
@@ -192,7 +192,7 @@
 
 
 
-<h3 id="typeof-能判断哪些类型"><a href="#typeof-能判断哪些类型" class="headerlink" title="typeof  能判断哪些类型"></a>typeof  能判断哪些类型</h3><ul>
+<h3 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof  操作符"></a>typeof  操作符</h3><ul>
 <li>判断基本类型：<code>Undefined</code> <code>Number</code> <code>String</code> <code>Boolean</code></li>
 <li>判断函数：<code>Function</code></li>
 <li>识别引用类型（不可再细分）：<code>Object</code></li>
@@ -201,7 +201,7 @@
 
 
 
-<h3 id="手写深拷贝"><a href="#手写深拷贝" class="headerlink" title="手写深拷贝"></a>手写深拷贝</h3><ul>
+<h2 id="手写深拷贝"><a href="#手写深拷贝" class="headerlink" title="手写深拷贝"></a>手写深拷贝</h2><ul>
 <li>默认情况下，基本类型都是深拷贝，引用类型都是浅拷贝</li>
 <li>浅拷贝复制的是对象的引用地址，因此克隆对象和原对象指向同一个地址，修改一个对象的属性，另一个对象的属性也随之改变</li>
 </ul>
@@ -216,25 +216,205 @@
 
 
 
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">100</span> + <span class="number">10</span>;      <span class="comment">// 110</span></span><br><span class="line"><span class="keyword">const</span> b = <span class="number">100</span> + <span class="string">&#x27;10&#x27;</span>;    <span class="comment">// &#x27;10010&#x27;</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="literal">true</span> + <span class="string">&#x27;10&#x27;</span>;   <span class="comment">// &#x27;true10&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="&#x3D;&#x3D; 运算符"></a>&#x3D;&#x3D; 运算符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span> == <span class="string">&#x27;100&#x27;</span>;        <span class="comment">// true</span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;&#x27;</span>;             <span class="comment">// true</span></span><br><span class="line"><span class="number">0</span> == <span class="literal">false</span>;          <span class="comment">// true</span></span><br><span class="line"><span class="literal">false</span> == <span class="string">&#x27;&#x27;</span>;         <span class="comment">// true</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>;   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="与"><a href="#与" class="headerlink" title="&#x3D;&#x3D;&#x3D;  与 &#x3D;&#x3D;"></a>&#x3D;&#x3D;&#x3D;  与 &#x3D;&#x3D;</h3><ul>
-<li><strong>除了 <code>== null</code> 之外，其余一律使用 &#x3D;&#x3D;&#x3D;</strong></li>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ul>
+<li>JavaScript 在声明时只有一种类型，只有到运行期间才会确定当前类型</li>
+<li>在运行期间，由于 JavaScript 没有对类型做严格限制，导致不同类型之间可以进行运算，因此需要允许类型之间互相转换</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="number">100</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">if</span> (obj.<span class="property">a</span> == <span class="literal">null</span>)&#123;&#125;</span><br><span class="line"><span class="comment">// 相当于</span></span><br><span class="line"><span class="comment">// if (obj.a === null || obj.a === undefined) &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="显式类型转换"><a href="#显式类型转换" class="headerlink" title="显式类型转换"></a>显式类型转换</h3><ul>
+<li>显式类型转换就是手动地将一种值转换为另一种值</li>
+<li>常用的显式类型转换方法有 <code>Number</code>、<code>String</code>、<code>Boolean</code>、<code>parseInt</code>、<code>parseFloat</code>、<code>toString</code> 等</li>
+</ul>
+<h4 id="to-boolean"><a href="#to-boolean" class="headerlink" title="to boolean"></a>to boolean</h4><p>使用 <code>Boolean()</code> 将其他类型的值转换为 Boolean 类型：</p>
+<table>
+<thead>
+<tr>
+<th>原始类型</th>
+<th>转换结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Undefined</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>0 和 NaN 返回 false，其他返回 true</td>
+</tr>
+<tr>
+<td>String</td>
+<td>空字符串返回 false，非空字符串返回 true</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Boolean</span>(<span class="literal">undefined</span>)       <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="literal">null</span>)            <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="number">0</span>)               <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="title class_">NaN</span>)             <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="string">&#x27;&#x27;</span>)              <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="string">&#x27;aaa&#x27;</span>)           <span class="comment">// true</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="number">222</span>)             <span class="comment">// true</span></span><br><span class="line"><span class="title class_">Boolean</span>(<span class="title class_">Symbol</span>())        <span class="comment">// true</span></span><br><span class="line"><span class="title class_">Boolean</span>(&#123;&#125;)              <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="if-语句和逻辑运算"><a href="#if-语句和逻辑运算" class="headerlink" title="if  语句和逻辑运算"></a>if  语句和逻辑运算</h3><ul>
+<h4 id="to-number"><a href="#to-number" class="headerlink" title="to number"></a>to number</h4><p>使用 <code>Number()</code> 将基本类型的值转换为 Number 类型：</p>
+<table>
+<thead>
+<tr>
+<th align="left">原始类型</th>
+<th align="left">转换结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Undefined</td>
+<td align="left">NaN</td>
+</tr>
+<tr>
+<td align="left">Null</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">true</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">false</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">String</td>
+<td align="left">如果字符串中只包含数字，则转换为对应的数字<br />如果字符串中只包含十六进制格式，则转换为对应的十进制数字<br />如果字符串为空，则转换为 0<br />如果字符串包含上述之外的字符，则转换为 NaN</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Number</span>(<span class="literal">undefined</span>)         <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="literal">null</span>)              <span class="comment">// 0</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="literal">true</span>)              <span class="comment">// 1</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="literal">false</span>)             <span class="comment">// 0</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;111&#x27;</span>)             <span class="comment">// 111</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;0x100F&#x27;</span>)          <span class="comment">// 4111</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;&#x27;</span>)                <span class="comment">// 0</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;abc123&#x27;</span>)          <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>Number()</code> 将对象转换成 Number 类型：</p>
+<ul>
+<li>调用对象的 <code>valueOf()</code> 方法，没有则去原型链上查找<ul>
+<li>如果 valueOf() 方法的返回值为原始值，则对返回值进行原始值 to number  的类型转换，得出转换结果</li>
+<li>如果 valueOf() 方法返回值是对象，则调用对象的 <code>toString()</code> 方法<ul>
+<li>如果返回值为原始值, 则对返回值进行原始值 to number 的类型转换, 得出转换结果</li>
+<li>如果返回值为对象, 则报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>toString</th>
+<th>valueOf</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>object</td>
+<td>“[object &lt;type&gt;]“</td>
+<td>指向自身</td>
+</tr>
+<tr>
+<td>function</td>
+<td>函数的字符串形式</td>
+<td>指向自身</td>
+</tr>
+<tr>
+<td>array</td>
+<td>“arr0, arr1, …” 或者 “”</td>
+<td>指向自身</td>
+</tr>
+<tr>
+<td>date</td>
+<td>包含本地时间信息的字符串</td>
+<td>从1970年1月1日开始至今的毫秒数</td>
+</tr>
+<tr>
+<td>regexp</td>
+<td>正则表达式的字符串形式</td>
+<td>指向自身</td>
+</tr>
+<tr>
+<td>error</td>
+<td>“&lt;err&gt;.name: &lt;err&gt;.message”</td>
+<td>指向自身</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Number</span>(&#123;&#125;)                         <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>(&#123;<span class="attr">a</span>: <span class="number">1</span>&#125;)                     <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>([])                         <span class="comment">// 0</span></span><br><span class="line"><span class="title class_">Number</span>([<span class="number">1</span>])                        <span class="comment">// 1</span></span><br><span class="line"><span class="title class_">Number</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])                  <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">let</span> a = <span class="number">1</span>&#125;)      <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="keyword">new</span> <span class="title class_">Date</span>)                   <span class="comment">// 1694697527729</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;opps&#x27;</span>))          <span class="comment">// NaN</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="regexp">/\d+/g</span>)                     <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="to-string"><a href="#to-string" class="headerlink" title="to string"></a>to string</h4><p>使用 <code>String()</code> 将基本类型的值转换为 String 类型：</p>
+<table>
+<thead>
+<tr>
+<th>原始类型</th>
+<th>转换结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Undefined</td>
+<td>“undefined”</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>“null”</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>相应数字的字符串类型</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>“true” or “false”</td>
+</tr>
+<tr>
+<td>String</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">String</span>(<span class="literal">undefined</span>)       <span class="comment">// undefined</span></span><br><span class="line"><span class="title class_">String</span>(<span class="literal">null</span>)            <span class="comment">// &#x27;null&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="number">123</span>)             <span class="comment">// &#x27;123&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="literal">true</span>)            <span class="comment">// &#x27;true&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="literal">false</span>)           <span class="comment">// &#x27;false&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>String()</code> 将对象转换为 String 类型：</p>
+<ul>
+<li>调用对象的<code>toString()</code>方法，没有则去原型链上查找<ul>
+<li><p>如果 toString() 方法的返回值为原始值，则对返回值进行原始值 to string 的类型转换，得出转换结果</p>
+</li>
+<li><p>如果 toString() 方法的返回值是对象，则调用对象的 <code>valueOf()</code> 方法</p>
+<ul>
+<li>如果返回值为原始值，则对返回值进行原始值 to string 的类型转换, 得出转换结果</li>
+<li>如果返回值为对象, 则报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">String</span>(&#123;&#125;)                         <span class="comment">// &#x27;[object Object]&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(&#123;<span class="attr">a</span>: <span class="number">1</span>&#125;)                     <span class="comment">// &#x27;[object Object]&#x27;</span></span><br><span class="line"><span class="title class_">String</span>([])                         <span class="comment">// &#x27;&#x27;</span></span><br><span class="line"><span class="title class_">String</span>([<span class="number">1</span>])                        <span class="comment">// &#x27;1&#x27;</span></span><br><span class="line"><span class="title class_">String</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])                  <span class="comment">// &#x27;1,2,3&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">let</span> a = <span class="number">1</span>&#125;)      <span class="comment">// &#x27;function()&#123;let a = 1&#125;&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="keyword">new</span> <span class="title class_">Date</span>)                   <span class="comment">// &#x27;Thu Sep 14 2023 21:35:58 GMT+0800 (中国标准时间)&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;opps&#x27;</span>))          <span class="comment">// &#x27;Error: opps&#x27;</span></span><br><span class="line"><span class="title class_">String</span>(<span class="regexp">/\d+/g</span>)                     <span class="comment">// &#x27;/\\d+/g&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><h4 id="运算符"><a href="#运算符" class="headerlink" title="+ 运算符"></a>+ 运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">100</span> + <span class="number">10</span>;        <span class="comment">// 110</span></span><br><span class="line"><span class="keyword">const</span> b = <span class="number">100</span> + <span class="string">&#x27;10&#x27;</span>;      <span class="comment">// &#x27;10010&#x27;</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="literal">true</span> + <span class="string">&#x27;10&#x27;</span>;     <span class="comment">// &#x27;true10&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="运算符-1"><a href="#运算符-1" class="headerlink" title="&#x3D;&#x3D; 运算符"></a>&#x3D;&#x3D; 运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span> == <span class="string">&#x27;100&#x27;</span>;              <span class="comment">// true</span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;&#x27;</span>;                   <span class="comment">// true</span></span><br><span class="line"><span class="number">0</span> == <span class="literal">false</span>;                <span class="comment">// true</span></span><br><span class="line"><span class="literal">false</span> == <span class="string">&#x27;&#x27;</span>;               <span class="comment">// true</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>;         <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="运算符-2"><a href="#运算符-2" class="headerlink" title="&#x3D;&#x3D;&#x3D;  运算符"></a>&#x3D;&#x3D;&#x3D;  运算符</h4><p><em>注意！除了  <code>== null</code> 之外，其余一律使用 <code>===</code></em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="number">100</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">if</span> (obj.<span class="property">a</span> == <span class="literal">null</span>)&#123;&#125;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="comment">// if (obj.a === null || obj.a === undefined) &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">10</span> &amp;&amp; <span class="number">0</span>);       <span class="comment">// 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;&#x27;</span> || <span class="string">&#x27;abc&#x27;</span>);   <span class="comment">// abc</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="variable language_">window</span>.<span class="property">abc</span>);   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="逻辑判断"><a href="#逻辑判断" class="headerlink" title="逻辑判断"></a>逻辑判断</h4><ul>
 <li>经过两次非运算为 true 的变量为 truly 变量，反之为 falsely 变量</li>
-<li>truly 变量：<code>!!a === true</code> 的变量</li>
-<li>falsely 变量：<code>!!a === false</code> 的变量</li>
+<li><code>truly</code> 变量：<code>!!a === true</code> 的变量</li>
+<li><code>falsely</code> 变量：<code>!!a === false</code> 的变量</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下是 falsely 变量，除此之外都是 truly 变量</span></span><br><span class="line">!!<span class="number">0</span> === <span class="literal">false</span></span><br><span class="line">!!<span class="title class_">NaN</span> === <span class="literal">false</span></span><br><span class="line">!!<span class="string">&#x27;&#x27;</span> === <span class="literal">false</span></span><br><span class="line">!!<span class="literal">null</span> === <span class="literal">false</span></span><br><span class="line">!!<span class="literal">undefined</span> === <span class="literal">false</span></span><br><span class="line">!!<span class="literal">false</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
@@ -242,11 +422,6 @@
 <li>if 语句判断的是 truly 变量，即只有 truly 变量才会进入 if 语句内</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// truly 变量</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">if</span> (a) &#123;</span><br><span class="line">	<span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> b = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">if</span> (b) &#123;</span><br><span class="line">	<span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// falsely 变量</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span> (c) &#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> d = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span> (d) &#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> e;</span><br><span class="line"><span class="keyword">if</span> (e) &#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>与或非的逻辑判断</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">10</span> &amp;&amp; <span class="number">0</span>);       <span class="comment">// 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;&#x27;</span> || <span class="string">&#x27;abc&#x27;</span>);   <span class="comment">// abc</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="variable language_">window</span>.<span class="property">abc</span>);   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 
       </div>
@@ -263,7 +438,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-08-25 22:55:23
+              2023-09-14 21:53:01
             </span>
             
                   <span class="post-categories">
@@ -281,14 +456,14 @@
                     <i class="iconfont icon-tags mr-10" title="标签"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="数据类型">
-                        #数据类型
+                      <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" title="深拷贝">
+                        #深拷贝
                       </a>
                     </span>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" title="深拷贝">
-                        #深拷贝
+                      <a href="/tags/%E7%B1%BB%E5%9E%8B/" title="类型">
+                        #类型
                       </a>
                     </span>
                     
@@ -314,7 +489,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">引用类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof-%E8%83%BD%E5%88%A4%E6%96%AD%E5%93%AA%E4%BA%9B%E7%B1%BB%E5%9E%8B"><span class="toc-text">typeof  能判断哪些类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-text">手写深拷贝</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-text">字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">&#x3D;&#x3D; 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E"><span class="toc-text">&#x3D;&#x3D;&#x3D;  与 &#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-text">if  语句和逻辑运算</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">引用类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof-%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">typeof  操作符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-text">手写深拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">显式类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#to-boolean"><span class="toc-text">to boolean</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#to-number"><span class="toc-text">to number</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#to-string"><span class="toc-text">to string</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">隐式类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">+ 运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-1"><span class="toc-text">&#x3D;&#x3D; 运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6-2"><span class="toc-text">&#x3D;&#x3D;&#x3D;  运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="toc-text">逻辑判断</span></a></li></ol></li></ol></li></ol>
       
     </div>
   </div>
@@ -607,12 +782,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97 + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E5%258F%2598%25E9%2587%258F%25E7%25B1%25BB%25E5%259E%258B%25E5%2592%258C%25E8%25AE%25A1%25E7%25AE%2597.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2 + '&url=' + https%3A%2F%2Falbertbobo.github.io%2FJS-%25E7%25B1%25BB%25E5%259E%258B%25E8%25BD%25AC%25E6%258D%25A2.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/JS-%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://albertbobo.github.io/JS-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
