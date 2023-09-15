@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-09-15T15:56:46.575Z</updated>
+  <updated>2023-09-15T15:57:11.067Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -17,15 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>JS原型与继承</title>
     <link href="https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF.html"/>
     <id>https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF.html</id>
     <published>2023-09-14T15:31:22.415Z</published>
-    <updated>2023-09-15T15:56:46.575Z</updated>
+    <updated>2023-09-15T15:57:11.067Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;构造函数与原型&quot;&gt;&lt;a href=&quot;#构造函数与原型&quot; class=&quot;headerlink&quot; title=&quot;构造函数与原型&quot;&gt;&lt;/a&gt;构造函数与原型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;每个函数都有一个</summary>
+        
+      
     
     
     
+    <category term="JS" scheme="https://albertbobo.github.io/categories/JS/"/>
     
+    
+    <category term="原型" scheme="https://albertbobo.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+    <category term="继承" scheme="https://albertbobo.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
     
   </entry>
   
