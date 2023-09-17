@@ -65,9 +65,9 @@
     <category term="JS" scheme="https://albertbobo.github.io/categories/JS/"/>
     
     
-    <category term="类" scheme="https://albertbobo.github.io/tags/%E7%B1%BB/"/>
-    
     <category term="继承" scheme="https://albertbobo.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+    <category term="类" scheme="https://albertbobo.github.io/tags/%E7%B1%BB/"/>
     
   </entry>
   
@@ -121,9 +121,9 @@
     <category term="JS" scheme="https://albertbobo.github.io/categories/JS/"/>
     
     
-    <category term="深拷贝" scheme="https://albertbobo.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
-    
     <category term="类型" scheme="https://albertbobo.github.io/tags/%E7%B1%BB%E5%9E%8B/"/>
+    
+    <category term="深拷贝" scheme="https://albertbobo.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
   </entry>
   

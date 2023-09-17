@@ -642,7 +642,8 @@
   /* font-weight: 600; */
   border-radius: 3px;
   background-color: var(--bg-text-md-code);
-  color: var(--color-text-md-code);
+  /*color: var(--color-text-md-code);*/
+  color: #00c857!important;
 }
 
 .markdown-body pre {
