@@ -643,7 +643,7 @@
   border-radius: 3px;
   background-color: var(--bg-text-md-code);
   /*color: var(--color-text-md-code);*/
-  color: #33cc00!important;
+  color: #00cc66!important;
 }
 
 .markdown-body pre {
