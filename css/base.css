@@ -82,7 +82,7 @@ a:hover {
 }
 
 .container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -458,7 +458,7 @@ a:hover {
 .post-catalog {
   position: absolute;
   top: calc(290px + 88px + 30px);
-  right: 50px;
+  right: 20px;
   width: calc(20% - 50px);
   font-size: 1.4rem;
   padding-left: 10px;
