@@ -6,7 +6,7 @@
   <link href="https://albertbobo.github.io/atom.xml" rel="self"/>
   
   <link href="https://albertbobo.github.io/"/>
-  <updated>2023-09-21T09:59:23.468Z</updated>
+  <updated>2023-09-21T13:25:56.876Z</updated>
   <id>https://albertbobo.github.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF.html"/>
     <id>https://albertbobo.github.io/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF.html</id>
     <published>2023-09-14T15:31:22.415Z</published>
-    <updated>2023-09-21T09:59:23.468Z</updated>
+    <updated>2023-09-21T13:25:56.876Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;理解原型&quot;&gt;&lt;a href=&quot;#理解原型&quot; class=&quot;headerlink&quot; title=&quot;理解原型&quot;&gt;&lt;/a&gt;理解原型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;每个函数都有一个</summary>
+    <summary type="html">&lt;h2 id=&quot;原型对象&quot;&gt;&lt;a href=&quot;#原型对象&quot; class=&quot;headerlink&quot; title=&quot;原型对象&quot;&gt;&lt;/a&gt;原型对象&lt;/h2&gt;&lt;h3 id=&quot;理解原型&quot;&gt;&lt;a href=&quot;#理解原型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
