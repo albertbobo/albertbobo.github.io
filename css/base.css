@@ -86,22 +86,28 @@ a:hover {
   margin: 0 auto;
 }
 
-.index .post-list {
-  width: 70%;
-  margin: 0 auto;
-}
 
 .index .post-list,
 .friend-index .friend-list,
 .archives .post-list,
+.category-index .category-list,
 .tag-index .tag-list,
 .about-index .markdown-body {
   padding: 0 40px;
 }
 
-.category-index .category-list {
+/*.category-index .category-list {
   padding: 0 110px;
+}*/
+
+
+.index .post-list, 
+.archives .post-list,
+.category-index .category-list {
+  width: 70%;
+  margin: 0 auto;
 }
+
 
 .btn-catalog {
   display: none;
