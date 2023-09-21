@@ -784,7 +784,7 @@ figure .pin-copy {
 
 .markdown-body h2 {
   margin-top: 2.5em;
-  padding-bottom: 0.3em;
+  /*padding-bottom: 0.3em;*/
   font-size: 1.5em;
 }
 
