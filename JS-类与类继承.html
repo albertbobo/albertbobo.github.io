@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-14 17:30:58
+          2023-09-24 02:50:16
         </span>
         
               <span class="post-categories">
@@ -363,9 +363,10 @@
 
 
 <h3 id="实例的-proto-属性"><a href="#实例的-proto-属性" class="headerlink" title="实例的 __proto__ 属性"></a>实例的 __proto__ 属性</h3><ul>
+<li>实例的 __proto__ 属性指向其构造函数的 prototype 属性</li>
 <li>子类实例的 __proto__ 属性的 __proto__ 属性指向父类实例的 __proto__ 属性，即子类的原型的原型就是父类的原型</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> <span class="title function_">A</span>();</span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">b.<span class="property">__proto__</span>.<span class="property">__proto__</span> === a.<span class="property">__proto__</span>     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_ inherited__">A</span> &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> <span class="title function_">A</span>();</span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> <span class="title function_">B</span>();</span><br><span class="line">a.<span class="property">__proto__</span> === A.<span class="property"><span class="keyword">prototype</span></span>               <span class="comment">// true</span></span><br><span class="line">b.<span class="property">__proto__</span>.<span class="property">__proto__</span> === a.<span class="property">__proto__</span>     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -393,7 +394,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-14 17:30:58
+              2023-09-24 02:50:16
             </span>
             
                   <span class="post-categories">
