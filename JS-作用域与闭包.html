@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-26 21:58:37
+          2023-09-26 22:00:36
         </span>
         
               <span class="post-categories">
@@ -210,7 +210,7 @@
 
 <h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><ul>
 <li>一个变量在当前作用域没有定义，但被使用了，就会向上级作用域，一层一层依次寻找，直至找到为止</li>
-<li>如果直到全局作用域都没找到该变量，则报错 xx is not defined</li>
+<li>如果直到全局作用域都没有找到该变量，则报错 <code>xx is not defined</code></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> a1 = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> a2 = <span class="number">200</span>;</span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">fn3</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> a3 = <span class="number">300</span>;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(a + a1 + a2 + a3);		<span class="comment">// 601</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">fn3</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fn2</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn1</span>();</span><br></pre></td></tr></table></figure>
 
@@ -229,7 +229,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-26 21:58:37
+              2023-09-26 22:00:36
             </span>
             
                   <span class="post-categories">
