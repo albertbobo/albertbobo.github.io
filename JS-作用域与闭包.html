@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-09-29 23:27:59
+          2023-09-29 23:33:14
         </span>
         
               <span class="post-categories">
@@ -257,7 +257,7 @@
 </ul>
 <p><em><strong>注意！</strong></em>所有自由变量的查找，是在<strong>函数定义</strong>的地方（而不是函数执行的地方），向上级作用域查找。</p>
 <p>方法一：函数作为返回值被返回</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">create</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="keyword">const</span> a = <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fn = <span class="title function_">create</span>();</span><br><span class="line"><span class="keyword">const</span> a = <span class="number">200</span>;</span><br><span class="line"><span class="title function_">fn</span>();		  <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">create</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fn = <span class="title function_">create</span>();</span><br><span class="line"><span class="keyword">const</span> a = <span class="number">200</span>;</span><br><span class="line"><span class="title function_">fn</span>();		  <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
 
 <p>方法二：函数作为参数被传递</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">print</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> a = <span class="number">100</span>;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">print</span>(fn);     <span class="comment">// 200</span></span><br></pre></td></tr></table></figure>
@@ -310,7 +310,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-09-29 23:27:59
+              2023-09-29 23:33:14
             </span>
             
                   <span class="post-categories">
