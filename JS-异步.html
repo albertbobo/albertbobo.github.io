@@ -142,7 +142,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-10-18 21:17:44
+          2023-10-19 20:17:49
         </span>
         
               <span class="post-categories">
@@ -227,21 +227,26 @@
 
 
 
-<h2 id="Event-Loop（事件循环-事件轮询）"><a href="#Event-Loop（事件循环-事件轮询）" class="headerlink" title="Event Loop（事件循环&#x2F;事件轮询）"></a>Event Loop（事件循环&#x2F;事件轮询）</h2><ul>
-<li>JS 代码一行一行地从前到后执行</li>
-<li>如果某一行代码执行报错，则停止下面代码的执行</li>
-<li>先执行完同步代码，再执行异步代码</li>
+<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><p><code>Event Loop</code> 又称事件循环或事件轮询，运行过程如下：</p>
+<ul>
+<li>同步代码，一行一行放在 <code>Call Stack</code>（调用栈）执行</li>
+<li>遇到异步，会先“记录”下，等待时机（定时、网络请求等）</li>
+<li>时机到了，就移动到 <code>Callback Queue</code>（任务队列）</li>
+<li>如 Call Stack 为空（即同步代码执行完毕），则 <code>Event Loop</code> 开始工作</li>
+<li>轮询查找 Callback Queue，如有则移动到 Call Stack 执行</li>
+<li>然后继续轮询查找，如此反复</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hi&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span> <span class="title function_">callback1</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;cb1&#x27;</span>);</span><br><span class="line">&#125;, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Bye&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单示例</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hi&#x27;</span>);                     <span class="comment">// 同步代码</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span> <span class="title function_">callback1</span>(<span class="params"></span>) &#123;      <span class="comment">// 异步代码</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;cb1&#x27;</span>);</span><br><span class="line">&#125;, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Bye&#x27;</span>);                    <span class="comment">// 同步代码</span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
+<p>上述示例的运行过程为：</p>
+<ul>
+<li>将同步代码 <code>console.log(&#39;Hi&#39;);</code> 推入 <strong>Call Stack</strong> 中进行执行，并在 <strong>Browser console</strong> 中显示打印结果 <code>&#39;Hi&#39;</code>，执行完毕则在 Call Stack 中移除</li>
+<li>将异步的定时器函数 <code>setTimeout</code> 放入 <strong>Web APIs</strong> 中，并开始计时</li>
+<li>将同步代码 <code>console.log(&#39;Bye&#39;);</code> 推入 Call Stack 中进行执行，并在 Browser console 中显示打印结果 <code>&#39;Bye&#39;</code>，执行完毕则在 Call Stack 中移除</li>
+<li>此时同步代码全部执行完毕，Call Stack 空置</li>
+<li>5000ms 后，将异步函数移入 <strong>Callback Queue</strong> 中，即刻启动 <strong>Event Loop</strong></li>
+<li>将异步函数推入 Call Stack 中执行函数体，在 Browser console 中显示打印结果 <code>&#39;cb1&#39;</code>，执行完毕将其移出 Call Stack</li>
+</ul>
 
       </div>
       
@@ -257,7 +262,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-10-18 21:17:44
+              2023-10-19 20:17:49
             </span>
             
                   <span class="post-categories">
@@ -303,7 +308,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%BC%82%E6%AD%A5"><span class="toc-text">单线程和异步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">异步的应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">Promise 的基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Loop%EF%BC%88%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF-%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%EF%BC%89"><span class="toc-text">Event Loop（事件循环&#x2F;事件轮询）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%BC%82%E6%AD%A5"><span class="toc-text">单线程和异步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">异步的应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">Promise 的基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Loop"><span class="toc-text">Event Loop</span></a></li></ol>
       
     </div>
   </div>
